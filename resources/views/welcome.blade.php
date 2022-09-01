@@ -412,14 +412,14 @@
             @foreach ($listItems as $listItem)
             <form method="post" action="{{ route('markComplete', $listItem->id) }}" accept-charset="UTF-8">
                 <p>Item: {{ $listItem->name }}
-                    {{csrf_field()}}
+                {!! csrf_field() !!}
                     
                     <button type="submit" style="max-height: 25px; margin-left: 20px;">Mark Complete</button>
                 </p>
             </form>
             @endforeach
             <form method="post" action="{{ route('saveItem') }}" accept-charset="UTF-8">
-                {{csrf_field()}}
+                {!! csrf_field() !!}
                 <label for="listItem">Todo Item</label><br>
                 <input type="text" name="listItem"><br>
                 <button type="submit">save item</button><br>
